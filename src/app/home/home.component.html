@@ -1,10 +1,407 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="wrapper">
+  <div class="page-header section-dark" style="background-image: url('assets/img/mountain_night.jpg')">
+    <!--<div class="filter"></div>-->
+    <div class="content-center">
+      <div class="container">
+        <div class="title-brand">
+          <div class="logo-home">
+            <img src="assets/img/logo_large.png" alt="">
+          </div>
+          <h1 class="presentation-title">Fastoye</h1>
+          <div class="fog-low">
+            <img src="assets/img/fog-low.png" alt="">
+          </div>
+          <div class="fog-low right">
+            <img src="assets/img/fog-low.png" alt="">
+          </div>
+        </div>
+
+        <h2 class="presentation-subtitle text-center">Technical news and video Channel</h2>
+      </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+    <!--<h6 class=" category-absolute ml-auto mr-auto">Designed and coded by
+      &lt;!&ndash; <h6 class="category category-absolute">Designed and coded by &ndash;&gt;
+
+      <a href="https://www.creative-tim.com" target="_blank">
+        <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo">
+      </a>
+    </h6>-->
+  </div>
+  <div class="main">
+    <!--<app-components></app-components>-->
+    <div class="section section-dark">
+      <div class="container">
+        <div class="row">
+            <h2 class="title" style="margin-bottom: 10px">Top News</h2>
+        </div>
+          <div class="row">
+          <!--<h5 class="float-right">see all</h5><br/>-->
+            <div class="col-md-12 text-md-right seeAll" (click)="seeAllLink('allPost')">
+              <a style="cursor: pointer">See All</a>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <br>
+          </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+
+            <!--<h5 style="display: inline" class="float-right">see all</h5><br/>-->
+           <!-- <span class="float-right" style="display: inline">
+              <a class="float-right" (click)="seeAllLink('allPost')">see all</a>
+            </span>-->
+
+            <!--<p class="description">
+              Now UI Kit comes with 100 custom icons made by our friends from NucleoApp. The official package contains over 2.100 thin icons which are looking great in combination with Now UI Kit Make sure you check all of them and use those that you like the most.
+            </p><br/>-->
+            <!--<a [routerLink]="['/nucleoicons']" class="btn btn-danger btn-round">View Demo Icons</a>
+            <a href="https://nucleoapp.com/?ref=1712" class="btn btn-outline-danger btn-round" target="_blank">View All Icons</a>-->
+
+            <div  class="row coloured-cards">
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card">
+                    <div class="card-image">
+                        <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+                    </div>
+
+                    <div  class="card-body">
+                      <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card">
+                    <div class="card-image">
+                      <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+                    </div>
+
+                    <div  class="card-body">
+                      <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card">
+                    <div class="card-image">
+                      <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+                    </div>
+
+                    <div  class="card-body">
+                      <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="card card-blog card-plain text-center">
+              <div class="card-image">
+                <a href="#pablo">
+                  <img class="img img-raised" src="./assets/img/venice1.jpg">
+                </a>
+              </div>
+              <div class="card-body">
+                <div class="card-category">
+                  <span class="label label-info main-tag">Popular</span>
+                </div>
+                <a href="javascrip: void(0);">
+                  <h3 class="card-title">You Should Get Excited About Virtual Reality.</h3>
+                  <h6 class="title-uppercase">October 20, 2016</h6>
+                </a>
+                <div class="card-description">
+                  <p>In the first sentence of Pitchfork’s review of my collaborative project with 9th Wonder, INDIE 500, a reviewer who is associated with music review site rhapsody.com writes about how I criticize and then distance myself from “celebrity straw men” with the line “celebrities be making money...</p>
+                </div>
+              </div>
+              <button class="btn btn-danger btn-round btn-sm btn-center-content">Read more</button>
+            </div>-->
+
+          </div>
+
+          <!--<div class="col-lg-6 col-md-12">
+            <div class="icons-container">
+              <i class="nc-icon nc-time-alarm"></i>
+              <i class="nc-icon nc-atom"></i>
+              <i class="nc-icon nc-camera-compact"></i>
+              <i class="nc-icon nc-watch-time"></i>
+              <i class="nc-icon nc-key-25"></i>
+              <i class="nc-icon nc-diamond"></i>
+              <i class="nc-icon nc-user-run"></i>
+              <i class="nc-icon nc-layout-11"></i>
+              <i class="nc-icon nc-badge"></i>
+              <i class="nc-icon nc-bulb-63"></i>
+              <i class="nc-icon nc-favourite-28"></i>
+              <i class="nc-icon nc-planet"></i>
+              <i class="nc-icon nc-tie-bow"></i>
+              <i class="nc-icon nc-zoom-split"></i>
+              <i class="nc-icon nc-cloud-download-93"></i>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-dark">
+      <div class="container">
+        <div class="row">
+          <h2 class="title" style="margin-bottom: 10px">Top Videos</h2>
+        </div>
+        <div class="row">
+          <!--<h5 class="float-right">see all</h5><br/>-->
+          <div class="col-md-12 text-md-right seeAll" (click)="seeAllLink('videos')">
+            <a style="cursor: pointer">See All</a>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+          <br>
+        </div>
+        <div class="row">
+          <!--<div class="col-lg-12 col-md-12">-->
+            <!--<h2 style="display: inline" class="title">Top Videos</h2><br/><br><br>
+            &lt;!&ndash;<h5 style="display: inline" class="float-right">see all</h5><br/>&ndash;&gt;
+            <span class="float-right" style="display: inline">
+              <a class="float-right" (click)="seeAllLink('videos')">see all</a>
+            </span>
+            <div  class="row coloured-cards">
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+                    <div  class="card-body">
+                      <h6  class="card-category">Best cards</h6>
+                      <h4  class="card-title"><a  href="#paper-kit">Blue Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card card-just-text" data-background="color" data-color="green" data-radius="none">
+                    <div  class="card-body">
+                      <h6  class="card-category">Best cards</h6>
+                      <h4  class="card-title"><a  href="#paper-kit">Green Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div  class="col-md-4 col-sm-6">
+                <div  class="card-big-shadow">
+                  <div  class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
+                    <div  class="card-body">
+                      <h6  class="card-category">Best cards</h6>
+                      <h4  class="card-title"><a  href="#paper-kit">Yellow Card</a></h4>
+                      <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+
+            <div class="col-md-4 text-center" *ngFor="let video of videos" routerLinkActive="active">
+              <!--<div class="video-container">
+                <a [attr.href]="'https://www.youtube.com' + '/watch?v=' + video.id.videoId" target="_blank">
+                  <img src={{video.snippet.thumbnails.high.url}} alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+                  <div class="button-inner">
+                    &lt;!&ndash;<iframe src="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>&ndash;&gt;
+                    &lt;!&ndash;<i class="fa fa-youtube-play fa-4x" aria-hidden="true"></i>&ndash;&gt;
+                    <img src="../../assets/img/youtubeSmall.png">
+                    &lt;!&ndash;<div id="youtubeButton"></div>&ndash;&gt;
+                    &lt;!&ndash;<button class="btn-border" style="background-image: url('../assets/img/youtubeButton.jpg');"></button>&ndash;&gt;
+                  </div>
+                </a>
+              </div>-->
+              <div class="card card-blog card-plain text-center">
+                <div class="card-image">
+                  <a href="#pablo">
+                    <img src={{video.snippet.thumbnails.high.url}} alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+                    <!--<div class="button-inner">
+                      <img src="../../assets/img/youtubeSmall.png">
+                    </div>-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-dark">
+      <div class="container">
+    <div  class="row">
+      <div class="col-md-12 ml-auto mr-auto">
+        <h2 class="title">Completed with examples</h2>
+        <p class="description">The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful kit.</p>
+        <br/><br>
+      </div>
+
+      <div  class="col-md-4">
+        <div  class="card" data-background="image" style="background-image: url('assets/img/daniel-olahh.jpg')">
+          <div class="card-body">
+            <h6 class="card-category">Top Phone by camera</h6>
+            <!--<div class="card-icon">
+              <i class="nc-icon nc-world-2"></i>
+            </div>-->
+            <!--<p class="card-description">Unlike fashionable design, it lasts many years – even in today’s throwaway society.</p>-->
+
+            <div  class="card-footer card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <a  class="btn btn-link btn-neutral" href="#pablo">
+                <i  aria-hidden="true" class="fa fa-book"></i> Show more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="col-md-4">
+        <div  class="card" data-background="image" style="background-image: url('assets/img/daniel-olahs.jpg')">
+          <div  class="card-body">
+            <h6  class="card-category">Top Phone by Battery</h6>
+            <div  class="card-footer card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <a  class="btn btn-link btn-neutral" href="#pablo">
+                <i  aria-hidden="true" class="fa fa-book"></i> Show more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="col-md-4">
+        <div  class="card" data-background="image" style="background-image: url('assets/img/uriel-soberanes.jpg')">
+          <div  class="card-body">
+            <h6  class="card-category">Top phone by performance</h6>
+            <div  class="card-footer card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <a  class="btn btn-link btn-neutral" href="#pablo">
+                <i  aria-hidden="true" class="fa fa-book"></i> Show more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+
+    <!--<div class="section section-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <h2 class="title">Completed with examples</h2>
+            <p class="description">The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful kit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-image section-login" style="background-image: url('assets/img/login-image.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
+            <div class="card card-register">
+              <h3 class="title">Welcome</h3>
+              <div class="social-line text-center">
+                <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                  <i class="fa fa-facebook-square"></i>
+                </a>
+                <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </div>
+              <form class="register-form">
+                <label>Email</label>
+                <div class="input-group form-group-no-border">
+                                    <span class="input-group-addon">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+                  <input type="text" class="form-control" placeholder="Email">
+                </div>
+
+                <label>Password</label>
+                <div class="input-group form-group-no-border">
+                                    <span class="input-group-addon">
+                                        <i class="nc-icon nc-key-25"></i>
+                                    </span>
+                  <input type="text" class="form-control" placeholder="Password">
+                </div>
+                <button class="btn btn-danger btn-block btn-round">Register</button>
+              </form>
+              <div class="forgot">
+                <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+              </div>
+            </div>
+            <div class="col text-center" routerLinkActive="active">
+              <a [routerLink]="['/signup']" class="btn btn-outline-neutral btn-round btn-lg">View Register Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!--<div class="section section-dark">
+      <div class="container">
+        <div class="row example-page">
+          <div class="col-md-6 text-center" routerLinkActive="active">
+            <a [routerLink]="['/landing']">
+              <img src="../../assets/img/examples/landing-page.JPG" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+              <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
+            </a>
+          </div>
+
+          <div class="col-md-6 text-center" routerLinkActive="active">
+            <a [routerLink]="['/user-profile']">
+              <img src="../../assets/img/examples/profile-page.JPG" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
+              <a [routerLink]="['/user-profile']" class="btn btn-outline-neutral btn-round">Profile Page</a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="section">
+      <div class="container text-center">
+        <!--<div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <h2 class="title">Do you like what you see?</h2>
+            <p class="description">Cause if you do, it can be yours for Free. Hit the button below and download it. Start a new project or give an old Bootstrap 4 project a new look.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 download-area ml-auto mr-auto">
+            <a href="https://www.creative-tim.com/product/paper-kit-2" class="btn btn-warning btn-round">Download free HTML</a>
+            <a href="https://www.creative-tim.com/product/paper-kit-2-angular" class="btn btn-danger btn-round">Download free Angular</a>
+          </div>
+        </div>-->
+        <div class="row justify-content-md-center sharing-area text-center">
+          <div class="text-center col-md-12 col-lg-8">
+            <h3>Thank you for supporting us!</h3>
+          </div>
+          <div class="text-center col-md-12 col-lg-8">
+            <a href="#pablo" class="btn btn-twitter-bg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+            <a href="#pablo" class="btn btn-google-bg linkedin-sharrre btn-round" rel="tooltip" title="Share!">
+              <i class="fa fa-google-plus"></i> Google
+            </a>
+            <a href="#pablo" class="btn btn-facebook-bg facebook-sharrre btn-round" rel="tooltip" title="Share!">
+              <i class="fa fa-facebook-square"></i> Facebook
+            </a>
+            <a href="https://github.com/creativetimofficial/paper-kit" class="btn btn-github-bg btn-github sharrre btn-round" rel="tooltip" title="Star on Github">
+              <i class="fa fa-github"></i> Star
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -61,6 +61,22 @@
         border-color: darken($social-google, 5%) !important;
     }
 }
+.btn-youtube-bg{
+  background-color: $social-youtube !important;
+  border-color: $social-youtube !important;
+  &:hover{
+    background-color: darken($social-youtube, 5%) !important;
+    border-color: darken($social-youtube, 5%) !important;
+  }
+}
+.btn-instagram-bg{
+  background-color: $social-instagram !important;
+  border-color: $social-instagram !important;
+  &:hover{
+    background-color: darken($social-instagram, 5%) !important;
+    border-color: darken($social-instagram, 5%) !important;
+  }
+}
 .btn-github-bg{
     background-color: #767676 !important;
     border-color: #767676 !important;

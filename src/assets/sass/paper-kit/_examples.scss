@@ -5,7 +5,7 @@
     background-color: #B2AFAB;
     background-position: center center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 40vh;
     max-height: 999px;
     overflow: hidden;
     position: relative;
@@ -181,8 +181,9 @@
 }
 
 .presentation-title{
-    font-size: 8em;
+    font-size: 7em;
     font-weight: 700;
+    padding-bottom: 20px;
     margin: 0;
     color: #FFFFFF;
     // background: #fbf8ec;
@@ -198,6 +199,8 @@
 .presentation-subtitle{
     font-size: 1.7em;
     color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .category-absolute{
@@ -242,6 +245,14 @@
     img{
         width: 100%;
     }
+}
+.logo-home{
+    max-width: 200px;
+    margin: 20px auto 5px;
+
+  img{
+    width: 100%;
+  }
 }
 .page-header{
     .content-center{

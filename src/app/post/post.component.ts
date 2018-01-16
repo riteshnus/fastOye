@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {VideoService} from './video.service';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-videos',
-  templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.scss']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.scss']
 })
 
-export class VideosComponent implements OnInit {
+export class PostComponent {
 
-  videos: any;
+  constructor() {}
+  /*videos: any;
 
   constructor(
     public videoService: VideoService,
@@ -33,5 +33,5 @@ export class VideosComponent implements OnInit {
 
   openVideo(){
     console.log('open');
-  }
+  }*/
 }
