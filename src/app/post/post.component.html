@@ -1,94 +1,12 @@
 <div class="wrapper">
-  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../assets/img/venice1.jpg');">
-    <div class="filter"></div>
+  <div class="page-header page-header-xxs" data-parallax="true" style="background-image: url('../assets/img/venice1.jpg');">
   </div>
-  <!--<div class="section profile-content">
-    <div class="container">
-      <div class="owner">
-        <div class="avatar">
-          <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-        </div>
-        <div class="name">
-          <h4 class="title">Jane Faker<br /></h4>
-          <h6 class="description">Music Producer</h6>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 ml-auto mr-auto text-center">
-          <p>An artist of considerable range, Jane Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
-          <br />
-          <button class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i> Settings</button>
-        </div>
-      </div>
-      <br/>
-      <div class="nav-tabs-navigation">
-        <div class="nav-tabs-wrapper">
-          <ngb-tabset [justify]="'center'">
-            <ngb-tab title="Follows">
-              <ng-template ngbTabContent >
-                <div class="row following" id="follows">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <ul class="list-unstyled follows">
-                      <li>
-                        <div class="row">
-                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-                            <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                          </div>
-                          <div class="col-md-7 col-sm-4 ml-auto">
-                            <h6>Flume<br/><small>Musical Producer</small></h6>
-                          </div>
-                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
-                            <div class="form-check">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="" checked="">
-                                <span class="form-check-sign"></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <hr />
-                      <li>
-                        <div class="row">
-                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-                            <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                          </div>
-                          <div class="col-md-7 col-sm-4 ml-auto">
-                            <h6>Banks<br /><small>Singer</small></h6>
-                          </div>
-                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
-                            <div class="form-check">
-                              <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="" checked="">
-                                <span class="form-check-sign"></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </ng-template>
-            </ngb-tab>
-            <ngb-tab title="Following">
-              <ng-template ngbTabContent>
-                <h3 class="text-muted">Not following anyone yet :(</h3>
-                <br>
-                <button class="btn btn-warning btn-round">Find artists</button>
-              </ng-template>
-            </ngb-tab>
-          </ngb-tabset>
-        </div>
-      </div>
-    </div>
-  </div>-->
 
-  <div class="section section-white">
+  <div class="section section-white section-top-line">
     <div class="container">
       <div class="row">
         <div class="col-md-6 ml-auto mr-auto text-center title">
-          <h2>A place for storytelling</h2>
+          <h2>A place for Reviews</h2>
           <!--<h3 class="title-uppercase"><small>Written by designers for designers</small></h3>-->
         </div>
       </div>
@@ -149,7 +67,6 @@
             <div class="card-image">
               <a href="#pablo">
                 <img class="img img-raised" src="./assets/img/venice1.jpg">
-                <p class="image-thumb">Photo by Cam Adams</p>
               </a>
             </div>
             <div class="card-body">
@@ -169,32 +86,44 @@
         </div>
 
       </div>
-      <hr>
-
     </div>
   </div>
 
 
-  <!--<div class="section ">
-    <div class="container">
-      <div class="row example-page">
-        <div class="col-md-4 text-center" *ngFor="let video of videos" routerLinkActive="active">
-          <div class="video-container">
-            <a [attr.href]="'https://www.youtube.com' + '/watch?v=' + video.id.videoId" target="_blank">
-              <img src={{video.snippet.thumbnails.high.url}} alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
-              <div class="button-inner">
-                &lt;!&ndash;<iframe src="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>&ndash;&gt;
-                &lt;!&ndash;<i class="fa fa-youtube-play fa-4x" aria-hidden="true"></i>&ndash;&gt;
-                <img src="../../assets/img/youtubeSmall.png">
-                &lt;!&ndash;<div id="youtubeButton"></div>&ndash;&gt;
-                &lt;!&ndash;<button class="btn-border" style="background-image: url('../assets/img/youtubeButton.jpg');"></button>&ndash;&gt;
-              </div>
-            </a>
+  <hr class="section-top-line">
+  <div class="col-md-8 mr-auto ml-auto">
+    <h2 class="text-center">Keep in touch</h2>
+    <form class="contact-form ng-untouched ng-pristine ng-valid" novalidate="">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Name</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-single-02"></i>
+                                    </span>
+            <input class="form-control" placeholder="Name" type="text">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label>Email</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+            <input class="form-control" placeholder="Email" type="text">
           </div>
         </div>
       </div>
-    </div>
-  </div>-->
+      <label>Message</label>
+      <textarea class="form-control" placeholder="Tell us your thoughts and feelings..." rows="4"
+                style="overflow: hidden"></textarea>
+      <div class="row">
+        <div class="col-md-4 mr-auto ml-auto">
+          <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
 </div>

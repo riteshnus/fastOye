@@ -1,8 +1,85 @@
 <div class="wrapper">
-  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../assets/img/venice1.jpg');">
-    <div class="filter"></div>
+  <div class="page-header page-header-xxs" data-parallax="true"
+       style="background-image: url('../assets/img/venice1.jpg');">
   </div>
-  <div class="section">
-    <h3>{{postDetail.title}}</h3>
+  <div class="section section-top-line" *ngIf="detailLoaded">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <header>
+            <h1 class="post-title">{{postDetail.title}}</h1>
+            <div class="post-title-metadata">
+              <span class="author-name">{{postDetail.createdBy}} </span> - {{postDetail.createdDate}}
+              <span class="label label-primary category-tag">{{postDetail.category}}</span>
+              <span class="share-post">
+                <button (click)="shareMedia('facebook')" class="btn btn-facebook-bg btn-just-icon">
+                  <i class="fa fa-facebook-square"></i>
+                </button>
+                <button (click)="shareMedia('googleplus')" class="btn btn-google-bg btn-just-icon">
+                  <i class="fa fa-google-plus-official"></i>
+                </button>
+                <!--<button (click)="shareMedia('instagram')" class="btn btn-instagram-bg btn-just-icon">
+                  <i class="fa fa-instagram"></i>
+                </button>-->
+                <button (click)="shareMedia('twitter')" class="btn btn-twitter-bg btn-just-icon">
+                   <i class="fa fa-twitter"></i>
+                </button>
+              </span>
+            </div>
+          </header>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <div class="">
+            <div class="post-image">
+              <img src="./assets/img/venice1.jpg" alt="{{postDetail.title}}">
+            </div>
+            <div class="post-content">
+              <p>{{postDetail.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
+  <hr class="section-top-line">
+  <div class="col-md-8 mr-auto ml-auto">
+    <h2 class="text-center">Keep in touch?</h2>
+    <form class="contact-form ng-untouched ng-pristine ng-valid" novalidate="">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Name</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-single-02"></i>
+                                    </span>
+            <input class="form-control" placeholder="Name" type="text">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label>Email</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+            <input class="form-control" placeholder="Email" type="text">
+          </div>
+        </div>
+      </div>
+      <label>Message</label>
+      <textarea class="form-control" placeholder="Tell us your thoughts and feelings..." rows="4"
+                style="overflow: hidden"></textarea>
+      <div class="row">
+        <div class="col-md-4 mr-auto ml-auto">
+          <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
 </div>

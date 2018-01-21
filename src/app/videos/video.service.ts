@@ -4,7 +4,7 @@ import { constant } from '../shared/constant';
 import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Observable';
 import { HttpClient , HttpRequest, HttpParams } from '@angular/common/http';
-
+import * as moment from 'moment';
 
 @Injectable()
 export class VideoService {
@@ -23,12 +23,12 @@ export class VideoService {
   }
 
   doGet(path): Observable<any> {
-    console.log('doGet');
+    // console.log('doGet');
     return this.doGetRequest(path);
   }
 
   private doGetRequest(path): Observable<any> {
-    console.log('doRequest');
+    // console.log('doRequest');
     const url = path;
 
     const headers = new Headers();
@@ -105,4 +105,9 @@ export class VideoService {
     return Promise.reject(error.message || error);
   }*/
 
+  formatDate(publishDate): any {
+    const day = moment(publishDate).format('MMMM D, YYYY');
+
+    return day;
+  }
 }

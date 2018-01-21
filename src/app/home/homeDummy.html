@@ -33,29 +33,17 @@
 
 
   <div class="main">
-    <div class="section section-dark">
+    <div class="section section-dark section-top-line" style="padding-top: 10px;">
       <div class="container">
 
         <div class="breakingNews bn-turquoise" id="bn3">
           <div class="bn-title" style="width: auto;"><h2 style="display: inline-block;">NEWS</h2><span></span></div>
-          <!--<ul style="left: 121px;">
-            <li style="display: block; top: -60px;"><a href="#">Mauris interdum eddlit non sapien imperdiet, ac dapibus mi maximus</a></li>
-            &lt;!&ndash;<li style="top: -60px; display: block;"><a href="#">Nullam sit amet nisl ex</a></li>
-            <li style="top: -60px; display: block;"><a href="#">Cras lorem augue, facilisis a commodo in, facilisis finibus libero vel ultrices.</a></li>
-            <li style="top: -0.942505px; display: block;"><a href="#">Maecenas imperdiet ante vitae neque facilisis cursus</a></li>
-            <li style="top: 59.0575px; display: block;"><a href="#">Maecenas libero ipsum, placerat in mattis vel, tincidunt quis est.</a></li>
-            <li style="top: 60px; display: block;"><a href="#">Curabitur tortor libero, vehicula sagittis luctus sed, lobortis sed arcu</a></li>&ndash;&gt;
-          </ul>-->
           <ul class="newsSticker" >
             <li>Etiam imperdiet volutpat libero eu tristique.</li>
             <li>Curabitur porttitor ante eget hendrerit adipiscing.</li>
             <li>Praesent ornare nisl lorem, ut condimentum lectus gravida ut.</li>
             <li>Nunc ultrices tortor eu massa placerat posuere.</li>
           </ul>
-          <!--<div class="bn-navi">
-            <span></span>
-            <span></span>
-          </div>-->
         </div>
 
         <div class="grid-container">
@@ -996,7 +984,7 @@
       <div class="section section-dark">
         <div class="container">
           <div class="header-text top-sec">
-            <span>Post</span>
+            <span>Reviews</span>
             <div class="seeAll" (click)="seeAllLink('allPost')">
               <a style="cursor: pointer">See All</a>
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -1007,49 +995,19 @@
             <div class="col-lg-12 col-md-12">
 
               <div  class="row coloured-cards">
-                <div  class="col-md-4 col-sm-6">
-                  <div  class="card-big-shadow">
-                    <div  class="card">
+                <div  class="col-md-4 col-sm-6" *ngFor="let elements of review | slice:0:6;let i = index;">
+                    <div  class="card" style="border: 2px solid orange;margin-top: 10px;">
                       <div class="card-image">
                         <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
                       </div>
-
                       <div  class="card-body">
-                        <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
-                        <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                        <h4  class="card-title" style="margin: 20px 0 20px 0px;display: inline-block">
+                          <a routerLink="/home/review/{{elements.name}}" rel="bookmark" style="font-weight: 500;color: #ef0828;">{{elements.name}}</a>
+                        </h4>
+                        <star-rating-comp class="star-rating" [labelPosition]="'right'" [starType]="'svg'" [size]="'medium'" [labelText]="elements.rating" [rating]="4.5" [step]="0.5" [showHalfStars]="true" [starType]="'icon'" [direction]="'ltr'" [readOnly]="true"></star-rating-comp>
+                        <p  class="card-description-new">{{elements.description}} </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div  class="col-md-4 col-sm-6">
-                  <div  class="card-big-shadow">
-                    <div  class="card">
-                      <div class="card-image">
-                        <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
-                      </div>
-
-                      <div  class="card-body">
-                        <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
-                        <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div  class="col-md-4 col-sm-6">
-                  <div  class="card-big-shadow">
-                    <div  class="card">
-                      <div class="card-image">
-                        <img src="../../assets/img/daniel-olahs.jpg" alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
-                      </div>
-
-                      <div  class="card-body">
-                        <h4  class="card-title" style="margin: 20px 0 20px 0px;"><a  href="#paper-kit">Blue Card</a></h4>
-                        <p  class="card-description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -1073,11 +1031,11 @@
             <div class="col-md-4 text-center" *ngFor="let video of videos" routerLinkActive="active">
               <div class="card card-blog card-plain text-center">
                 <div class="card-image">
-                  <a href="#pablo">
+                  <a [attr.href]="'https://www.youtube.com' + '/watch?v=' + video.id.videoId" target="_blank">
                     <img src={{video.snippet.thumbnails.high.url}} alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
-                    <!--<div class="button-inner">
+                    <div class="button-inner">
                       <img src="../../assets/img/youtubeSmall.png">
-                    </div>-->
+                    </div>
                   </a>
                 </div>
               </div>
@@ -1088,28 +1046,34 @@
 
 
       <!--advertise-->
-      <div class="section">
+      <!--<div class="section">-->
        <!-- <h2>service worked</h2>
         <div class="feed-item" *ngFor="let post of feed.posts">
           <h2>{{post.title}}</h2>
         </div>-->
-      </div>
+      <!--</div>-->
 
       <!--sixth part-->
 
-      <div class="section">
+      <div class="section section-top-line">
         <div class="container">
           <div class="row">
             <div class="col-lg-8 col-md-12">
-              <h2 class="title" style="color: #000000 !important;">About Us</h2><br>
+              <h2 style="color: #000000 !important;">About Us</h2><br>
               <p class="description" style="color: #000000 !important;">
                 Now UI Kit comes with 100 custom icons made by our friends from NucleoApp. The official package contains over 2.100 thin icons which are looking great in combination with Now UI Kit Make sure you check all of them and use those that you like the most.
               </p><br >
-              <a class="btn btn-outline-danger btn-round" href="https://nucleoapp.com/?ref=1712" target="_blank">Feedback</a>
+              <a class="btn btn-outline-danger btn-round" routerLink="feedback">Feedback</a>
             </div>
 
             <div class="col-lg-4 col-md-12">
-              <img src="assets/img/logo_large.png" alt="">
+              <div class="contact-us">
+                <h4>Conatct Us: </h4>
+                <p> Write a mail  to <b> <a href="" target="_top">fastoyeindia@gmail.com</a></b></p>
+              </div>
+              <div class="contact-us-logo text-center">
+                <img src="assets/img/logo_large.png" alt="">
+              </div>
             </div>
 
           </div>

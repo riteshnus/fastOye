@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {VideoService} from './video.service';
 
+
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
@@ -24,14 +25,10 @@ export class VideosComponent implements OnInit {
       .subscribe(
         data => {
           this.videos = data.items;
-          console.log(this.videos);
-          // this.prepareCard(data);
-          // this.loading.dismiss();
+          // console.log(this.videos);
         }
       );
   }
 
-  openVideo(){
-    console.log('open');
-  }
+
 }

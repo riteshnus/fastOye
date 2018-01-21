@@ -1,0 +1,143 @@
+.post-title{
+  font-family: serif;
+  color: black;
+  font-size: 44px;
+  line-height: 54px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.post-title-metadata{
+  font-family: 'Open Sans',arial,sans-serif;
+  font-size: 12px;
+  margin-bottom: -10px;
+  line-height: 1;
+  .author-name{
+    font-weight: 600;
+  }
+}
+
+.post-image{
+  height: 300px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.category-tag{
+  font-size: 0.8em;
+  margin-top: -2px;
+  margin-left: 0.5rem;
+}
+
+.post-content{
+  margin-top: 1.5em;
+  margin-bottom: 3rem;
+   p{
+     font-family: Georgia, Times, "Times New Roman", serif;
+     font-size: 19px;
+     color: #0b1011;
+     line-height: 32px;
+   }
+}
+
+.share-post{
+  float: right;
+  margin-top: -21px;
+  display: inline;
+}
+
+
+.review-table{
+  //margin: 1em 0.5em;
+  border: 1px solid navajowhite;
+  background-color: #f5f3e4;
+  box-shadow: -4px 4px 22px rgba(0,0,0,.15);
+  .review-table-content {
+    margin: 1em;
+    vertical-align: middle;
+    .spec-heading {
+      display: inline;
+      margin: 0em 1.2em 0em 0.7em;
+      font-size: 23px;
+      font-variant: petite-caps;
+      font-weight: 500;
+      color: brown;
+    }
+    span.text-content {
+      font-size: 17px;
+      font-weight: 400;
+      color: #7b621b;
+    }
+  }
+}
+
+.review-text{
+  margin: 2em 0em;
+  color: #333;
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    word-wrap: break-word;
+    width: 100%;
+    vertical-align: baseline;
+  }
+}
+
+.color-brown{
+  color: brown;
+}
+
+.title-text{
+  font-weight: 600;
+  margin: 16px 0 6px 15px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #f5115a;
+}
+
+div#my-id {
+  float: left;
+  margin: 3px 0px;
+}
+
+.review-shop{
+  .shop-table {
+    margin: 1em 2em;
+    tr{
+      height: 5em;
+    .shop-img {
+      background-size: contain;
+      overflow: hidden;
+      position: relative;
+      width: 37%;
+      left: 4px;
+      z-index: 1;
+      background-repeat: no-repeat;
+      }
+      .shop-item{
+        font-weight: 400;
+        color: #0b1011;
+        padding-right: 2em;
+        font-size: 22px;
+      }
+      .shop-price{
+        font-size: initial;
+        font-family: cursive;
+      }
+    }
+  }
+}
+
+.supplier-cell {
+  background: url('../../assets/img/amazon.jpg') no-repeat scroll left center;
+  background-size: contain;
+  min-height: 11vh;
+  max-height: 999px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}

@@ -2,31 +2,33 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HomeService} from '../home/home.service';
 import { ShareLink } from 'social-media-sharing';
+import {ReviewService} from "./review.service";
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detailPost.component.html',
-  styleUrls: ['./detail.component.scss']
+  selector: 'app-review',
+  templateUrl: './review.component.html',
+  styleUrls: ['./review.component.scss']
 })
 
 
-export class DetailPostComponent implements OnInit{
+export class ReviewComponent implements OnInit {
 
-  postDetail: any;
+  reviewDetail: any;
   detailLoaded = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private homeService: HomeService
+    private reviewService: ReviewService
     ) { }
 
   ngOnInit(): void {
-    const post = this.route.snapshot.paramMap.get('post');
-    this.homeService
-      .getParticularPost(post)
+    const review = this.route.snapshot.paramMap.get('reviewArticle');
+    console.log('review art', review);
+    this.reviewService
+      .getParticularReview(review)
       .then(res => {
-        this.postDetail = res;
+        this.reviewDetail = res;
         this.detailLoaded = true;
         console.log(res);
       });
@@ -34,13 +36,13 @@ export class DetailPostComponent implements OnInit{
 
   shareMedia(media: string) {
     const url: string = document.location.href;
-    console.log(this.postDetail);
+    console.log(this.reviewDetail);
     const socialMediaLinks = new ShareLink(media);
 
     if (media === 'facebook') {
       const shareLink = socialMediaLinks.get({
         u: url,
-        quote: this.postDetail.title,
+        quote: this.reviewDetail.name,
         hashtag: '#Fastoye'
       });
     } else if (media === 'twitter') {
@@ -59,4 +61,8 @@ export class DetailPostComponent implements OnInit{
 
   }
 
+
+  openShop(url: string) {
+    window.open(url, '_blank');
+  }
 }

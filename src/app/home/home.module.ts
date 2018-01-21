@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import {VideoService} from '../videos/video.service';
 import {HomeService} from "./home.service";
+import {StarRatingModule} from "angular-star-rating";
 
 // import { ComponentsModule } from '../components/components.module';
 
@@ -16,6 +17,7 @@ import {HomeService} from "./home.service";
     CommonModule,
     BrowserModule,
     FormsModule,
+    StarRatingModule.forRoot(),
     RouterModule
     // ComponentsModule
   ],

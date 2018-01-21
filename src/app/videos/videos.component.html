@@ -84,7 +84,7 @@
     </div>
   </div>-->
 
-  <div class="section ">
+  <div class="section section-top-line">
     <div class="container">
       <div class="row example-page">
         <div class="col-md-4 text-center" *ngFor="let video of videos" routerLinkActive="active">
@@ -102,7 +102,7 @@
           </div>-->
           <div class="card card-blog card-plain text-center">
             <div class="card-image">
-              <a href="#pablo">
+              <a [attr.href]="'https://www.youtube.com' + '/watch?v=' + video.id.videoId" target="_blank">
                 <img src={{video.snippet.thumbnails.high.url}} alt="Rounded Image" class="img-rounded img-responsive" style="width: 100%">
                 <div class="button-inner">
                 <img src="../../assets/img/youtubeSmall.png">
@@ -115,7 +115,7 @@
               </div>
               <a href="javascrip: void(0);">
                 <h3 class="card-title">{{video.snippet.title}}</h3>
-                <h6 class="title-uppercase">October 20, 2016</h6>
+                <h6 class="title-uppercase">{{videoService.formatDate(video.snippet.publishedAt)}}</h6>
               </a>
               <div class="card-description">
                 <p>{{video.snippet.description}}</p>
@@ -153,5 +153,40 @@
       </div>
     </div>
   </div>-->
+
+  <hr class="section-top-line">
+  <div class="col-md-8 mr-auto ml-auto">
+    <h2 class="text-center">Keep in touch?</h2>
+    <form class="contact-form ng-untouched ng-pristine ng-valid" novalidate="">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Name</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-single-02"></i>
+                                    </span>
+            <input class="form-control" placeholder="Name" type="text">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label>Email</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+            <input class="form-control" placeholder="Email" type="text">
+          </div>
+        </div>
+      </div>
+      <label>Message</label>
+      <textarea class="form-control" placeholder="Tell us your thoughts and feelings..." rows="4"
+                style="overflow: hidden"></textarea>
+      <div class="row">
+        <div class="col-md-4 mr-auto ml-auto">
+          <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 </div>

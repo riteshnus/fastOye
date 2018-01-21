@@ -17,7 +17,11 @@ import {PostComponent} from "./post/post.component";
 import {AllLinksComponent} from "./allLinks/allLinks.component";
 import {HomeService} from "./home/home.service";
 import {HttpModule} from "@angular/http";
-import {DetailPostComponent} from "./DetailPost/detailPost.component";
+import {DetailPostComponent} from "./detailPost/detailPost.component";
+import {FeedbackComponent} from "./feedback/feedback.component";
+import {StarRatingModule} from "angular-star-rating";
+import {ReviewComponent} from "./review/review.component";
+import {ReviewService} from "./review/review.service";
 
 
 @NgModule({
@@ -28,11 +32,14 @@ import {DetailPostComponent} from "./DetailPost/detailPost.component";
     VideosComponent,
     PostComponent,
     DetailPostComponent,
-    AllLinksComponent
+    FeedbackComponent,
+    AllLinksComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
+    StarRatingModule.forRoot(),
     FormsModule,
     RouterModule,
     HttpClientModule,
@@ -42,7 +49,8 @@ import {DetailPostComponent} from "./DetailPost/detailPost.component";
   ],
   providers: [
     VideoService,
-    HomeService
+    HomeService,
+    ReviewService
   ],
   bootstrap: [AppComponent]
 })

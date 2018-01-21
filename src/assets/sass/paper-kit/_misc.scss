@@ -122,3 +122,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     background-color: transparent !important;
     border-bottom: 1px solid transparent;
 }
+
+div.label-value {
+  padding-top: 5px;
+  color: limegreen;
+}
+
+div#my-id {
+  float: left;
+  margin: 11px 0px;
+}

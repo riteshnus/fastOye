@@ -1,0 +1,203 @@
+<div class="wrapper">
+  <div class="page-header page-header-xxs" data-parallax="true"
+       style="background-image: url('../assets/img/venice1.jpg');">
+  </div>
+  <div class="section" *ngIf="detailLoaded">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <header>
+            <h1 class="post-title">{{reviewDetail.name}}</h1>
+            <div class="post-title-metadata">
+              <span class="author-name">{{reviewDetail.createdBy}} </span> - {{reviewDetail.createdDate}}
+
+              <span class="share-post">
+                <button (click)="shareMedia('facebook')" class="btn btn-facebook-bg btn-just-icon">
+                  <i class="fa fa-facebook-square"></i>
+                </button>
+                <button (click)="shareMedia('googleplus')" class="btn btn-google-bg btn-just-icon">
+                  <i class="fa fa-google-plus-official"></i>
+                </button>
+                <button (click)="shareMedia('twitter')" class="btn btn-twitter-bg btn-just-icon">
+                   <i class="fa fa-twitter"></i>
+                </button>
+              </span>
+            </div>
+            <star-rating-comp class="star-rating" [labelPosition]="'right'" [starType]="'svg'" [size]="'medium'" [labelText]="reviewDetail.rating" [rating]="4.5" [step]="0.5" [showHalfStars]="true" [id]="'my-id'" [starType]="'icon'" [direction]="'ltr'" [readOnly]="true"></star-rating-comp>
+          </header>
+          <hr style="margin-top: 3.2em;">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <div class="">
+            <div class="post-image">
+              <img src="./assets/img/venice1.jpg" alt="{{reviewDetail.name}}">
+            </div>
+            <hr>
+            <div class="review-table">
+              <h3 class="title-text">Specification</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-television fa-lg color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Display</h3>
+                    </span>
+                      <span class="text-content">
+                      {{reviewDetail.specification[0].display}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-battery-full color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Battery</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].battery}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-archive color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">RAM</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].internalStorage}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-camera color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Rear Camera</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].rearCamera}}
+                    </span>
+                  </div>
+                </div>
+                <!--<div class="offset-2"></div>-->
+                <div class="col-md-6">
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-video-camera color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Resolution</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].resolution}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-cog color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Operating System</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].os}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-archive color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">External Storage</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].storage}}
+                    </span>
+                  </div>
+                  <div class="review-table-content">
+                    <span class="text-heading">
+                      <i class="fa fa-camera color-brown" aria-hidden="true"></i>
+                      <h3 class="spec-heading">Front Camera</h3>
+                    </span>
+                    <span class="text-content">
+                      {{reviewDetail.specification[0].frontCamera}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="review-features">
+
+                <h3 class="title-text">Key Feature</h3>
+                <ul style="margin: 12px 0 18px 0;">
+
+                  <li style="margin-bottom: 4px;font-weight: 400" *ngFor="let feature of reviewDetail.keyFeature">{{feature}}</li>
+                </ul>
+
+
+              </div>
+
+              <div class="review-shop">
+
+                <h3 class="title-text">Shop</h3>
+                <div class="container">
+                <div class="row">
+                  <!--<div class="supplier-cell" style="background-image: url('../assets/img/venice1.jpg');"></div>-->
+                  <table class="shop-table">
+                    <tr>
+                      <td class="shop-img" style="background-image: url('../assets/img/amazon.jpg');">
+                      </td>
+                      <td class="shop-item">
+                        <span> {{reviewDetail.name}} </span>
+                      </td>
+                      <td class="shop-button">
+                        <button type="button" class="btn btn-danger shop-price" (click)="openShop(reviewDetail.amazonUrl);"><span>&#8360;</span>. {{reviewDetail.amazonPrice}}</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-text">
+              <p>
+                {{reviewDetail.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-top-line">
+  <div class="col-md-8 mr-auto ml-auto">
+    <h2 class="text-center">Keep in touch?</h2>
+    <form class="contact-form ng-untouched ng-pristine ng-valid" novalidate="">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Name</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-single-02"></i>
+                                    </span>
+            <input class="form-control" placeholder="Name" type="text">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label>Email</label>
+          <div class="input-group">
+                                    <span class="input-group-addon" style="border: 1px solid #dddddd;">
+                                        <i class="nc-icon nc-email-85"></i>
+                                    </span>
+            <input class="form-control" placeholder="Email" type="text">
+          </div>
+        </div>
+      </div>
+      <label>Message</label>
+      <textarea class="form-control" placeholder="Tell us your thoughts and feelings..." rows="4"
+                style="overflow: hidden"></textarea>
+      <div class="row">
+        <div class="col-md-4 mr-auto ml-auto">
+          <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
