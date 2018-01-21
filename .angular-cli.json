@@ -22,7 +22,8 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "assets/sass/paper-kit.scss",
-        "assets/css/demo.css"
+        "assets/css/demo.css",
+        "../node_modules/angular-star-rating/assets/scss/star-rating.scss"
       ],
       "scripts": [
         "../node_modules/popper.js/dist/umd/popper.js",
